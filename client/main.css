@@ -3,8 +3,15 @@
 
 }
 
+.btn-container {
+  width: 205px;
+  height: 50px;
+  margin: 0 auto 0 auto;
+}
+
 .btn {
-  margin: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 20px;
+  float: left;
 }
 .list-group-item {
   text-align: center;

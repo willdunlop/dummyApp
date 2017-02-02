@@ -1,20 +1,15 @@
 //imports
 import React from 'react';
-//dummy data
 
+//This component is now recieving data for elevioArticleId's state
 
 //create/export component
 export default class ElevioHelpButtonComponent extends React.Component {
 
-
-
-
-
   whenClicked(){
     if (this.props) {
       //_ELEV.id(this.props.id);
-      console.log('this works now kek')
-      console.log('felev' + this.props.felev);
+      console.log("Help item = " + this.props.elevioFunction.openArticle(this.props.elevioArticleId))
     } else {
       console.log('_elev is not attached to window, help is unavailable');
     }
@@ -25,7 +20,7 @@ export default class ElevioHelpButtonComponent extends React.Component {
         <button className="btn btn-primary"  onClick={this.whenClicked.bind(this)} >
           Help?
         </button>
-        
+
       </div>
     );
   }

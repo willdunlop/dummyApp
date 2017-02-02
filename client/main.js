@@ -2,20 +2,34 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import DummyArticle from './components/article';
 
-const felev = [
-    {id: 1, topic: 'Introduction'},
-    {id: 2, topic: 'How to use the interface'},
-    {id: 3, topic: 'git gud'}
-   ];
+const ARTICLES = [
+  'Introduction',
+  'How to use the interface',
+  'git gud',
+  'Your account settings',
+  'Home Page',
+  'Login'
+];
 
-const fulln = 0;
+const elevioArticleId = 0;
+
+  const articalRetrieval = function(id) {
+       return {
+         openArticle: function(id){
+           return ARTICLES[id]
+         }
+       }
+    }
+    //"openArticle can be reached"
+const elevioFunction = articalRetrieval(elevioArticleId)
+
 
 const App = () => {
   console.log('App const kicks in');
 
   return(
     <div>
-      <DummyArticle felev={felev} fulln={fulln} />
+      <DummyArticle elevioFunction={elevioFunction} elevioArticleId={elevioArticleId} />
     </div>
   );
 };

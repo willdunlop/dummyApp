@@ -8,23 +8,25 @@ console.log('dummyArticle kicks in');
 export default class DummyArticle extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { fulln:  0};
+    this.state = { elevioArticleId:  0};
   }
 
   dummyShuf(){
-    const fulln = 0;
-    const n = Math.random() * (2.49 - 0) + 0;
-    this.setState({fulln: Math.round(n)});
-    console.log(this.state.fulln);
+    const n = Math.random() * (5.49 - 0) + 0;
+    this.setState({elevioArticleId: Math.round(n)});
+    //console.log(this.state.elevioArticleId);
+
   }
 
   render(){
     return(
       <div>
-        <div className="media list-group-item">{this.props.felev[this.state.fulln].topic}
-        <button className="btn btn-default" onClick={this.dummyShuf.bind(this)}>Shuffle</button>
+        <div className="media list-group-item">{this.props.elevioFunction.openArticle(this.state.elevioArticleId)}
         </div>
-        <ElevioHelpButtonComponent felev={this.props.felev} />
+        <div className="btn-container">
+          <button className="btn btn-default" onClick={this.dummyShuf.bind(this)}>Shuffle</button>
+          <ElevioHelpButtonComponent elevioFunction={this.props.elevioFunction} elevioArticleId={this.state.elevioArticleId} />
+        </div>
       </div>
     );
   };
