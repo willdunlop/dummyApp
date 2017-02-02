@@ -7,11 +7,7 @@ import React from 'react';
 export default class ElevioHelpButtonComponent extends React.Component {
 
 
-  dummyShuf(){
-    const n = Math.random() * (2.49 - 0) + 0;
-    this.setState({fulln: Math.round(n)});
-    console.log(this.state.fulln);
-  }
+
 
 
   whenClicked(){
@@ -29,7 +25,7 @@ export default class ElevioHelpButtonComponent extends React.Component {
         <button className="btn btn-primary"  onClick={this.whenClicked.bind(this)} >
           Help?
         </button>
-        <button className="btn btn-default" onClick={this.dummyShuf}>Shuffle</button>
+        
       </div>
     );
   }
