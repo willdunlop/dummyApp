@@ -21,11 +21,11 @@ export default class DummyArticle extends React.Component {
   render(){
     return(
       <div>
-        <div className="media list-group-item">{this.props.elevioFunction.openArticle(this.state.elevioArticleId)}
+        <div className="media list-group-item">{this.props._elev.openArticle(this.state.elevioArticleId)}
         </div>
         <div className="btn-container">
           <button className="btn btn-default" onClick={this.dummyShuf.bind(this)}>Shuffle</button>
-          <ElevioHelpButtonComponent elevioFunction={this.props.elevioFunction} elevioArticleId={this.state.elevioArticleId} />
+          <ElevioHelpButtonComponent _elev={this.props._elev} elevioArticleId={this.state.elevioArticleId} />
         </div>
       </div>
     );

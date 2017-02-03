@@ -5,7 +5,7 @@ import DummyArticle from './components/article';
 const ARTICLES = [
   'Introduction',
   'How to use the interface',
-  'git gud',
+  'Other',
   'Your account settings',
   'Home Page',
   'Login'
@@ -21,7 +21,7 @@ const elevioArticleId = 0;
        }
     }
     //"openArticle can be reached"
-const elevioFunction = articalRetrieval(elevioArticleId)
+const _elev = articalRetrieval(elevioArticleId)
 
 
 const App = () => {
@@ -29,7 +29,7 @@ const App = () => {
 
   return(
     <div>
-      <DummyArticle elevioFunction={elevioFunction} elevioArticleId={elevioArticleId} />
+      <DummyArticle _elev={_elev} elevioArticleId={elevioArticleId} />
     </div>
   );
 };

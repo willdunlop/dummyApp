@@ -7,11 +7,12 @@ import React from 'react';
 export default class ElevioHelpButtonComponent extends React.Component {
 
   whenClicked(){
-    if (this.props) {
+    if (this.props._elev) {
       //_ELEV.id(this.props.id);
-      console.log("Help item = " + this.props.elevioFunction.openArticle(this.props.elevioArticleId))
+       this.props._elev.openArticle(this.props.elevioArticleId)
     } else {
-      console.log('_elev is not attached to window, help is unavailable');
+      
+      throw new Error('_elev is not attached to window, help is unavailable');
     }
   }
   render(){
